@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="styles/amazon.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/placeOrder.css">
+   
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+     
+    <!--BootStrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS link-->
+    <!--BootStrap Icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!--Nav-bar begins-->
+    <nav class="nav-bar-place-order">
+
+        <div class="amazon-logo-secure-checkout-cart-section">
+            <div class="logo-location-place-order-container">
+                <div class="amazon-logo-container">
+                    <a href="amazon.html">
+                        <div class="amazon-logo">
+                            <img src="images/amazon-logo.png" alt="Amazon Logo">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="secure-checkout-container">
+                <span class="secure-checkout-text">Secure Checkout</span>
+            </div>
+
+            <div class="right-place-order-section">
+                <div class="cart-num-text-container">
+                    <a href="shoppingCart.html">
+                        <div class="cart-container">
+                            <div class="cart-image-num-container">
+                                    <div class="cart-num-items">
+                                        <span class="js-cart-num-items">0</span>
+                                    </div>
+                                    <div class="cart-image">
+                                        <img src="images/cart-icon.png" alt="cart image">    
+                                    </div>
+                                    
+                                </div>
+                                <div class="cart-text">
+                                <span >Cart</span> 
+                            </div>
+                        </div>    
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <!--End of the navbar-->
+    <main>
+        <div class="delivery-pay-place-order-section1">
+            <div class="left-page"></div>
+            <div class="delivery-pay-place-order-section">
+                <div class="place-order-delivery-pay-container">
+                    <div class="placeOrder-delivery-container">
+                        <div class="rapproach-delivery-place">
+                            <div class="order-destination-change">
+                                <span class="place-order-destination">Delivering to Jean Eric Tsanga</span>
+                                <a href="#change-address" class="place-order-change">change</a>
+                            </div>
+                            <div class="destination-name-container">
+                                160G WILLOWDALE DR APT 102, FREDERICK, MD, 21702-3949, United States
+                            </div>
+                        </div>
+                        <a href="#add-delivery-instructions">Add delivery instructions</a>
+                    </div>
+                    <div class="placeOrder-delivery-container">
+                        <div class="rapproach-delivery-place">
+                            <div class="order-destination-change">
+                                <span class="place-order-destination">Pay with Visa 1256</span>
+                                <a href="#change-address" class="place-order-change">change</a>
+                            </div>
+                        </div>
+                        <a href="#add-delivery-instructions">Select payment plan</a>
+                        <a href="#add-delivery-instructions">Use a gift card, Voucher, or promo code</a>
+                    </div>
+                </div> 
+                <div class="place-order-container">
+                    <button class="place-order-button js-place-order-button">Place your order</button>
+                    <div class="place-order-amazon-policy">
+                        <span class="place-order-amazon-policy-order">
+                            By placing your order, you agree to Amazon's 
+                            <a href="#privacy-notice">privacy notice</a> and 
+                            <a href="#conditions-of-use">conditions of use.</a>
+                        </span>
+                    </div>
+                    <div class="place-order-horizontal-line"></div>
+                    <div class="items-shipping-tax-total-container">
+                    <div class="number-items-price-container">
+                        <span class="place-order-number-items">Items(2):</span>
+                        <span class="place-order-price js-place-order-price">$538.15</span>
+                    </div>
+                    <div class="number-items-price-container">
+                        <span class="place-order-shipping-handling">Shipping and Handling:</span>
+                        <span class="place-order-shipping-price"><i class="bi bi-currency-dollar"></i>0.00</span>
+                    </div>
+                    <div class="number-items-price-container">
+                        <span class="place-order-estimated-tax">Estimated tax to be collected:*</span>
+                        <span class="place-order-estimated-tax-price">$38.34</span>
+                    </div>
+                    <div class="number-items-price-container">
+                        <span class="place-order-total">Order total:</span>
+                        <span class="place-order-total-price js-place-order-total-price">$571.34</span>
+                    </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="right-page"></div>
+        </div>
+        <div class="place-order-amazon-gift-card-section">
+            <div class="left-page"></div>
+            <div class="place-order-amazon-container">
+                <div class="gift-card-place-order">
+                    <div class="gift-card-place-order-container">
+                        <img src="images/amazon-gift-card.png" alt="amazon-gift-card">
+                        <div class="place-order-get-amazon-gift-card">
+                            <span class="place-order-gift-card-text">Get Amazon Gift Card instantly</span>
+                            <span class="upon-approval">upon approval for primeVisa. No annual fee."</span>
+                            <a href="#gift-card">Open offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-page"></div>
+        </div>
+        <!--Items in the cart-->
+        <div class="place-order-cart-first-item-section">
+            <div class="left-page"></div>
+            <div class="place-order-first-item-full-row">
+                <div class="place-order-first-item-container">
+                    <div class="arraving-container">
+                        <span class="place-order-arriving">Arriving </span>
+                        <span class="arriving-day-container">May 31, 2026</span>
+                    </div>
+
+
+                    <div class="product-delivery-date">
+                        <div class="image-item-name-price-container">
+                            <div class="image-minus-plus-button-container">
+                                <img src="images/electronic-images/hp-2.jpg" alt="toubur">
+                                <div class="place-order-button-gift-options">
+                                    <div class="add-to-cart-delete-add">
+                                        <button class="cart-action-btn" >
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+
+                                        <span class="add-to-cart-num-items">1</span>
+
+                                        <button class="add-to-cart-plus-sign">
+                                            <i class="bi bi-plus-lg"></i>
+                                        </button>
+                                    </div>
+                                    <span class="gift-option-place-order">Gift options not available</span>
+                                </div>
+                            </div>
+                            <div class="item-name-price-place-order">
+                                <span class="name-place-order">
+                                    ANPABO Licensed Ford F-150 24V 2 Seater Ride on Car for 
+                                    Kids, 4x100W Motors for All-Terrain Electric Car with Parental 
+                                    Remote, Retro Style, 3-Speeds, Large Storage Box, Music Player, 
+                                    Aged 3-8, White
+                                </span>
+                                <span class="bought-place-order">100+ bought in past month</span>
+                                <span class="price-place-order-cart">$349.99</span>
+                                <span class="shopping-cart-check-icon-prime"><i class="bi bi-check-lg"></i>prime</span>
+                                <a href="#disclaimer">Disclaimers</a>
+                            </div>
+                        </div>
+
+                        <div class="radio-input-delivery-date">
+                            <div>
+                            <input type="radio" class="radio-input-place-order" checked>
+                            </div>
+                            <span class="delivery-date">Thursday, jun 4 - Monday, jun 8</span>
+                            <span class="delivery-options-free">FREE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="right-page"></div>
+        </div>
+
+        <!---Place order confirmation-->
+
+        <!--xmlns="http://www.w3.org/2000/svg": Tells the browser: This element contains SVG graphics."
+            Without it, some browsers may not render the SVG correctly.-->
+        <!--viewBox="0 0 52 52": Defines the SVG's internal coordinate system. Format: minX minY width height-->
+        <!--A path is the most powerful SVG shape. It can draw any shape.
+            The d attribute contains drawing commands. M = Move-->
+        <div class="success-overlay" id="successModal">
+            <div class="success-card">
+            <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        
+            <div class="success-text">
+                <h3>Order Confirmed</h3>
+                <p>Thank you. Your order has been successfully placed and is being processed.</p>
+            </div>
+        
+            <button class="close-btn js-close-btn" id="closeBtn">Continue</button>
+            </div>
+        </div>
+        <!--End of place order confirmation-->
+
+
+        <!--End of the cart-->
+        <div class="bottom-order-total-section">
+            <div class="left-page"></div>
+            <div class="bottom-order-full-line">
+                <div class="place-order-button-total-order-container">
+                    <div class="place-order-div-button">
+                        <button class="place-order-bottom-button js-place-order-button">Place your order</button>
+                    </div>
+                    <div class="total-order-amazon-policy-bottom">
+                        <div class="bottom-total-price-container">
+                            <span class="bottom-total-order-price">Order total:</span>
+                            <span class="bottom-total-order-price js-place-order-total-price">$571.33</span>
+                        </div>
+                        <div class="place-order-amazon-policy">
+                            <span class="place-order-amazon-policy-order">
+                                By placing your order, you agree to Amazon's 
+                                <a href="#privacy-notice">privacy notice</a> and 
+                                <a href="#conditions-of-use">conditions of use.</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-page"></div>
+        </div>
+        <!--Back to the top of the page  section-->
+        <div class="back-to-top">
+        <div class="leftpage-section"></div>
+        <a href="placeOrder.html">
+            <div class="go-to-top">
+                <span>Back to top</span>
+            </div>
+        </a>
+        <div class="rightpage-section"></div>
+        </div>
+        <!--Amazon bottom main page logo and language and flag section-->
+        <div class="bottom-logo-lang-flag">
+            <div class="leftpage-section"></div>
+            <div class="before-footer-links">
+                <img src="images/amazon-logo.png" alt="amazon-logo">
+                <div class="bottom-button">
+                    <button class="but-buttom">
+                        <i class="bi bi-globe"></i><span> English </span>
+                        <img src="images/up-down.png" alt="up-down">
+                    </button>
+                </div>    
+                <div class="bottom-button">
+                    <button class="but-buttom">
+                        <img src="images/United State flag.png" alt="up-down">
+                        <span>United States</span>
+                    </button>
+                </div>    
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+
+        <div class="conditions-of-use-section">
+        <div class="leftpage-section"></div>
+        <div class="conditions-of-use-copyright-container">
+            <div class="conditions-of-use-container">
+                <span><a href="#conditions-of-use">Conditions of Use</a></span>
+                <span><a href="#privacy-notice">Privacy Notice</a></span>
+                <span><a href="#privacy-notice">Consumer Health Data Privacy Disclosure</a></span>
+                <span><a href="#interest-based-ads">Your Ads Privacy Choices</a></span>
+            </div>
+            <span>© 1996-2026, Amazon.com, Inc. or its affiliates</span>
+        </div>
+        <div class="rightpage-section"></div>
+        </div>
+
+    </main>
+    
+    
+    <script src="data/products.js"></script>
+    <script src="scripts/placeOrder.js"></script>
+    
+</body>
+</html>

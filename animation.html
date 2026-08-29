@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Nike Style Shoe Reveal</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#020306;font-family:Arial,Helvetica,sans-serif}
+canvas{display:block}
+.ui{
+  position:fixed;left:6vw;top:10vh;color:white;z-index:10;pointer-events:none
+}
+.ui .small{letter-spacing:8px;font-size:12px;color:#86bfff;margin-bottom:12px}
+.ui h1{font-size:clamp(42px,8vw,110px);line-height:.85;font-weight:900;letter-spacing:-4px}
+.ui h1 span{color:#55b7ff;text-shadow:0 0 28px #2f9dff}
+.ui p{margin-top:22px;color:#b8c7d6;font-size:15px;letter-spacing:2px}
+.replay{
+  position:fixed;right:28px;top:24px;z-index:10;
+  background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.2);
+  padding:10px 18px;border-radius:30px;cursor:pointer;letter-spacing:2px
+}
+.loading{
+  position:fixed;inset:0;display:grid;place-items:center;color:white;background:#020306;z-index:20
+}
+</style>
+</head>
+<body>
+
+<div class="loading" id="loading">LOADING PRODUCT EXPERIENCE...</div>
+
+<div class="ui">
+  <div class="small">INTRODUCING</div>
+  <h1>VELOCITY<br><span>ZERO</span></h1>
+  <p>LIGHTWEIGHT • AIR CUSHIONED • STREET READY</p>
+</div>
+
+<button class="replay" onclick="location.reload()">REPLAY</button>
+
+<script type="module">
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { AfterimagePass } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/AfterimagePass.js";
+
+const IMAGE_PATHS = [
+  "images/men-shoes-gallery/air-jordan-1.jpg",
+  "images/men-shoes-gallery/air-jordan-2.jpg",
+  "images/men-shoes-gallery/air-jordan-5.jpg",
+  "images/men-shoes-gallery/air-jordan-3.jpg",
+  "images/men-shoes-gallery/air-jordan-6.jpg"
+];
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x020306);
+scene.fog = new THREE.Fog(0x020306, 8, 32);
+
+const camera = new THREE.PerspectiveCamera(42, innerWidth / innerHeight, 0.1, 100);
+camera.position.set(0, 1.4, 8);
+
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+renderer.shadowMap.enabled = true;
+document.body.appendChild(renderer.domElement);
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight), .9, .5, .18));
+const after = new AfterimagePass();
+after.uniforms.damp.value = .88;
+composer.addPass(after);
+
+const clock = new THREE.Clock();
+
+const floor = new THREE.Mesh(
+  new THREE.PlaneGeometry(60,60),
+  new THREE.MeshStandardMaterial({ color:0x05070b, metalness:.8, roughness:.18 })
+);
+floor.rotation.x = -Math.PI/2;
+floor.position.y = -1.25;
+floor.receiveShadow = true;
+scene.add(floor);
+
+const grid = new THREE.GridHelper(60, 60, 0x1a6cff, 0x111820);
+grid.position.y = -1.24;
+grid.material.transparent = true;
+grid.material.opacity = .22;
+scene.add(grid);
+
+const key = new THREE.SpotLight(0xffffff, 9, 30, .45, .65);
+key.position.set(4, 8, 5);
+key.castShadow = true;
+scene.add(key);
+
+const rimBlue = new THREE.PointLight(0x1e9bff, 8, 18);
+rimBlue.position.set(-5, 2, -4);
+scene.add(rimBlue);
+
+const rimRed = new THREE.PointLight(0xff3344, 3, 14);
+rimRed.position.set(4, 1, -5);
+scene.add(rimRed);
+
+scene.add(new THREE.AmbientLight(0xffffff, .32));
+
+const loader = new THREE.TextureLoader();
+const textures = await Promise.all(IMAGE_PATHS.map(p => loader.loadAsync(p)));
+document.getElementById("loading").style.display = "none";
+
+textures.forEach(t => {
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = 16;
+});
+
+function makeProduct() {
+  const group = new THREE.Group();
+
+  const mats = textures.map(t => new THREE.MeshStandardMaterial({
+    map:t,
+    transparent:true,
+    side:THREE.DoubleSide,
+    roughness:.32,
+    metalness:.08
+  }));
+
+  const geo = new THREE.PlaneGeometry(4.4, 2.8, 1, 1);
+
+  const views = [];
+
+  for(let i=0;i<5;i++){
+    const m = new THREE.Mesh(geo, mats[i]);
+    m.castShadow = true;
+    m.receiveShadow = true;
+    m.visible = i === 0;
+    group.add(m);
+    views.push(m);
+  }
+
+  // Add fake thickness layers behind image
+  for(let i=1;i<=12;i++){
+    const shell = new THREE.Mesh(
+      new THREE.PlaneGeometry(4.38, 2.78),
+      new THREE.MeshBasicMaterial({
+        map:textures[0],
+        transparent:true,
+        opacity:.035,
+        side:THREE.DoubleSide
+      })
+    );
+    shell.position.z = -i * .018;
+    group.add(shell);
+  }
+
+  group.userData.views = views;
+  group.userData.current = 0;
+
+  return group;
+}
+
+const product = makeProduct();
+product.position.set(0, .05, -18);
+product.scale.set(.25,.25,.25);
+scene.add(product);
+
+const reflection = makeProduct();
+reflection.scale.set(.25,-.25,.25);
+reflection.position.set(0,-1.22,-18);
+reflection.rotation.x = 0;
+reflection.traverse(o=>{
+  if(o.material){
+    o.material = o.material.clone();
+    o.material.transparent = true;
+    o.material.opacity = .25;
+  }
+});
+scene.add(reflection);
+
+function showView(index){
+  product.userData.views.forEach((v,i)=>v.visible=i===index);
+  reflection.userData.views.forEach((v,i)=>v.visible=i===index);
+  product.userData.current=index;
+}
+
+const ringGeo = new THREE.RingGeometry(1.1,1.16,180);
+const ringMat = new THREE.MeshBasicMaterial({ color:0x4ab8ff, transparent:true, opacity:0, side:THREE.DoubleSide });
+const ring = new THREE.Mesh(ringGeo, ringMat);
+ring.rotation.x = -Math.PI/2;
+ring.position.y = -1.18;
+scene.add(ring);
+
+const particles = new THREE.Group();
+for(let i=0;i<420;i++){
+  const p = new THREE.Mesh(
+    new THREE.SphereGeometry(Math.random()*0.018+.006,8,8),
+    new THREE.MeshBasicMaterial({
+      color: Math.random()>.75 ? 0xff3344 : 0x66c7ff,
+      transparent:true,
+      opacity:Math.random()*.8
+    })
+  );
+  p.position.set((Math.random()-.5)*16, Math.random()*7-1.2, (Math.random()-.5)*18);
+  p.userData.speed = .15 + Math.random()*.45;
+  particles.add(p);
+}
+scene.add(particles);
+
+const laser = new THREE.Mesh(
+  new THREE.PlaneGeometry(14,.035),
+  new THREE.MeshBasicMaterial({ color:0x58c7ff, transparent:true, opacity:.0 })
+);
+laser.position.set(0,-1.13,0);
+laser.rotation.x = -Math.PI/2;
+scene.add(laser);
+
+function easeOutCubic(x){ return 1 - Math.pow(1-x,3); }
+function easeOutBack(x){
+  const c1=1.70158,c3=c1+1;
+  return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2);
+}
+
+let lastView = -1;
+
+function animate(){
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  particles.children.forEach(p=>{
+    p.position.y += p.userData.speed * .012;
+    if(p.position.y>6) p.position.y=-1.2;
+  });
+  particles.rotation.y += .0012;
+
+  if(t < 4.2){
+    const p = Math.min(t/4.2,1);
+    const e = easeOutBack(p);
+
+    product.position.z = -18 + e*18;
+    product.position.y = .05 + Math.sin(p*Math.PI)*.72;
+    product.rotation.y = Math.PI*2.15*e - .18;
+    product.rotation.x = .12*Math.sin(p*Math.PI);
+    product.scale.setScalar(.25 + e*.95);
+
+    reflection.position.z = product.position.z;
+    reflection.scale.set(.25 + e*.95, -(.25 + e*.95), .25 + e*.95);
+
+    const viewIndex = Math.min(4, Math.floor(p*5));
+    if(viewIndex !== lastView){
+      showView(viewIndex);
+      lastView = viewIndex;
+    }
+  } else {
+    product.position.z = 0;
+    product.position.y = .05 + Math.sin(t*1.8)*.12;
+    product.rotation.y += .008;
+    product.rotation.x = Math.sin(t*1.2)*.035;
+    product.scale.setScalar(1.2);
+
+    reflection.position.z = 0;
+    reflection.scale.set(1.2,-1.2,1.2);
+
+    const viewIndex = Math.floor((t-4.2)/1.2)%5;
+    if(viewIndex !== lastView){
+      showView(viewIndex);
+      lastView = viewIndex;
+    }
+  }
+
+  if(t > 1.2 && t < 2.6){
+    const p = (t-1.2)/1.4;
+    laser.material.opacity = Math.sin(p*Math.PI)*.9;
+    laser.position.z = -5 + p*10;
+  }
+
+  if(t > 3.9 && t < 5.4){
+    const p = (t-3.9)/1.5;
+    ring.scale.setScalar(1 + p*6);
+    ring.material.opacity = 1-p;
+  }
+
+  camera.position.x = Math.sin(t*.32)*.65;
+  camera.position.y = 1.45 + Math.sin(t*.4)*.12;
+  camera.position.z = 7.2 - Math.min(t,5)*.25;
+  camera.lookAt(0,.05,0);
+
+  key.position.x = Math.sin(t*.6)*4;
+  rimBlue.intensity = 6 + Math.sin(t*2)*2;
+
+  composer.render();
+}
+
+animate();
+
+addEventListener("resize",()=>{
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);
+  composer.setSize(innerWidth,innerHeight);
+});
+</script>
+</body>
+</html>

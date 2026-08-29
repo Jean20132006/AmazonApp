@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/amazon.css">
+    <link rel="stylesheet" href="styles/shoppingCart.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!--BootStrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS link-->
+    <!--BootStrap Icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="logo-location-container">
+            <div class="hamburger-tooltip-hello-signin">
+                <a href="hamburger-sidebar-signin">
+                    <img src="images/avatar-icon.png" alt="avatar icon">
+                    <span>Hello, Sign in</span>
+                </a>    
+            </div>
+            <div class="amazon-logo-container">
+                <a href="amazon.html">
+                    <div class="amazon-logo">
+                        <img src="images/amazon-logo.png" alt="Amazon Logo">
+                    </div>
+                </a>
+            </div>
+                    
+            <div class="location-text">
+                <a href="#location">
+                    <div class="location-icon-address">
+                        <div class="location-icon-update">
+                            <i class="bi bi-geo-alt" id="location-icon-address"></i>
+                        </div>
+                        <div class="location-details">
+                            <div class="delivery-name-location-container">
+                                <span class="delivery-address">Deliver to </span>
+                                <span class="delivery-address js-jean-get">you</span>
+                            </div>
+                            <span class="update-location">Update location</span>
+                        </div>        
+                    </div>        
+                </a>
+            </div>
+        </div>
+
+        <div class="search-bar-container">
+            <div class="all">
+                <button class="all-button">
+                    <span>All</span>
+                    <div class="all-drop-downfill">
+                        <i class="bi bi-caret-down-fill"></i>
+                    </div>        
+                </button>
+                <div class="all-tooltip">Search in</div>
+                <div class="all-active-tooltip">
+                    <ul>
+                        <a href="#all-departments"><li class="all-department">All Departments</li></a>
+                        <a href="#alexa-skills"><li>Alexa Skills</li></a>
+                        <a href="#amazon-devices"><li>Amazon Devices</li></a>
+                        <a href="#amazon-fresh"><li>Amazon Fresh</li></a>
+                        <a href="#appliances"><li>Appliances</li></a>
+                        <a href="#arts-crafts"><li>Arts & Crafts</li></a>
+                        <a href="#automotive-parts-accessories"><li>Automotive Parts & Accessories</li></a>
+                        <a href="#baby"><li>Baby</li></a>
+                        <a href="#beauty-personal-care"><li>Beauty & Personal Care</li></a>
+                        <a href="#books"><li>Books</li></a>
+                        <a href="#cds-vinyl"><li>CDs & Vinyl</li></a>
+                        <a href="#cell-phones-accessories"><li>Cell Phones & Accessories</li></a>
+                        <a href="#clothing-shoes-jewelry"><li>Clothing, Shoes & Jewelry</li></a>
+                        <a href="#collectibles-fine-art"><li>Collectibles & Fine Art</li></a>
+                        <a href="#computers-accessories"><li>Computers & Accessories</li></a>
+                        <a href="#electronics"><li>Electronics</li></a>
+                        <a href="#garden-outdoor"><li>Garden & Outdoor</li></a>
+                        <a href="#gift-cards"><li>Gift Cards</li></a>
+                        <a href="#grocery-gourmet-food"><li>Grocery & Gourmet Food</li></a>
+                        <a href="#handmade"><li>Handmade</li></a>
+                        <a href="#health-household-baby-care"><li>Health, Household & Baby Care</li></a>
+                        <a href="#home-kitchen"><li>Home & Kitchen</li></a>
+                        <a href="#industrial-scientific"><li>Industrial & Scientific</li></a>
+                        <a href="#kindle-store"><li>Kindle Store</li></a>
+                        <a href="#luggage-travel-gear"><li>Luggage & Travel Gear</li></a>
+                        <a href="#movies-tv"><li>Movies & TV</li></a>
+                        <a href="#musical-instruments"><li>Musical Instruments</li></a>
+                        <a href="#office-products"><li>Office Products</li></a>
+                        <a href="#pet-supplies"><li>Pet Supplies</li></a>
+                        <a href="#prime-video"><li>Prime Video</li></a>
+                        <a href="#software"><li>Software</li></a>
+                        <a href="#sports-outdoors"><li>Sports & Outdoors</li></a>
+                        <a href="#tools-home-improvement"><li>Tools & Home Improvement</li></a>
+                        <a href="#toys-games"><li>Toys & Games</li></a>
+                        <a href="#video-games"><li>Video Games</li></a>
+                    </ul>
+                </div>
+            </div>
+            <input type="text" id="search-input" name="search" class="search-bar-input js-search-input" placeholder="Search Amazon">
+           <!--<div class="search-bar-input-container">
+               <input type="text" class="search-bar-input" placeholder="Search Amazon">
+           </div>-->
+           <button class="search-button js-search-btn">
+                <i class="bi bi-search"></i>
+            </button>
+           <!--<div class="search-bar-button-container">
+                <button class="search-button">
+                    <i class="bi bi-search"></i>
+                </button>
+           </div>-->        
+       </div>
+        <div class="right-section">
+            <div class ="lang-account-order-cart">
+               <div class="lang-container">
+                    <a href="#choose country">
+                        <div class="lang-flag-container">
+                            <div class="flag-icon">
+                                <img src="images/United State flag.png" alt="US Flag" >
+                            </div>
+                            <div class="lang-select">
+                                <span>EN</span>
+                            </div>
+                        </div>
+                    </a>
+                <div class="drop-fill-icon">
+                    <i class="bi bi-caret-down-fill"></i>
+                </div>
+
+                <div class="lang-container-tooltip">
+                    <div class="lang-tooltip-pointer"></div>
+                    <div class="tooltip-text">
+                        <p>Change language</p>
+                        <div class="lang-radio-button">
+                            <form>
+                                <input type="radio" id="english" name="language" value="english" checked>
+                                <label for="english">English - EN</label><br>
+                                <hr>
+                                <input type="radio" id="spanish" name="language" value="spanish">
+                                <label for="spanish">Spanish - ES</label><br>
+                                <hr>
+                                
+                            </form>
+                        </div>
+                        <div class="flag-text">
+                            <div class="tooltip-flag">
+                                <img src="images/United State flag.png" alt="US Flag">
+                                <span>You are shopping on Amazon.com</span>
+                            </div>                            
+                            
+                        </div>
+                        <div>
+                            <a href="#change-country">Change country/region.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="account-lists-container">
+                <div class="account-signin-container">
+                    <a href="sign_in.html">
+                        <div class="hello-sign" >
+                            <span >Hello,</span>
+                            <span class="js-jean-get">Sign in</span>
+                        </div>
+                        <div class="account-lists-text">
+                            <span>Account & Lists</span>
+                        </div>
+                    </a> 
+                    <div class="account-signin-tooltip">
+                        <div class="account-tooltip-pointer"></div>
+                        <div class="account-tooltip-text">
+                            <div class="sign-in-button-container">
+                                <a href="sign_in.html">
+                                    <button class="sign-in-button">Sign in</button>
+                                </a>
+                            </div>
+                            <div class="account-create-text">
+                                <span>New customer? <a href="sign_in.html">Start here.</a></span>
+                            </div>
+                            <hr>
+                            <div class="your-account-links">
+                                <div class="your-list">
+                                    <span>Your Lists</span><br>
+                                    <a href="#createList">Create a list</a>
+                                    <br>
+                                    <a href="#findList">Find a list or registry</a>                        
+                                </div>
+
+                                <div class="vertical-line"></div>
+                                <div class="your-account">
+                                    <span>Your Account</span>
+                                    <div class="account-links">
+                                        <a href="#account">Account</a><br>
+                                        <a href="#orders">Orders</a><br>
+                                        <a href="#keepshopping">Keep Shopping For</a><br>
+                                        <a href="#recommendations">Recommendations</a><br>
+                                        <a href="#browsinghistory">Browsing History</a><br>
+                                        <a href="#amazoncreditcards">Amazon Credits Cards</a><br>
+                                        <a href="#watchlist">Watchlist</a><br>
+                                        <a href="#videos">Video Purchases & Rental</a><br>
+                                        <a href="#kindle">Kindle Unlimited</a><br>
+                                        <a href="#contentanddevice">Content & Devices</a><br>
+                                        <a href="#subscribe">Subscribe & Save Items</a><br>
+                                        <a href="#membership">Memberships &Subscriptions</a><br>
+                                        <a href="#primemember">Prime membership</a><br>
+                                        <a href="#music">Music Library</a><br>
+                                        <a href="#start">Start a Selling Account</a><br>
+                                        <a href="#createfree">Create Your Free Business<br>Account</a><br>
+                                        <a href="#customerservice">Customer Service</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+                <div class="down-fill-container">
+                    <i class="bi bi-caret-down-fill"></i>
+                </div>  
+            </div>
+            <div class="return-order-container">
+                <a href="order_return.html">
+                    <div class="return-text">
+                        <span>Returns</span>
+                    </div>
+                    <div class="order-text">
+                        <span>& Orders</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="cart-num-text-container">
+                <a href="shoppingCart.html">
+                    <div class="cart-container">
+                           <div class="cart-image-num-container">
+                                <div class="cart-num-items">
+                                    <span class="js-cart-num-items">0</span>
+                                </div>
+                                <div class="cart-image">
+                                    <img src="images/cart-icon.png" alt="cart image">    
+                                </div>
+                                
+                            </div>
+                            <div class="cart-text">
+                              <span >Cart</span> 
+                           </div>
+                    </div>    
+                </a>
+            </div>
+         </div>
+        </div>
+    </nav>
+    <!--End of the navbar-->
+    <!--Begin header section-->
+    <!--header-->
+    <header class="header">
+        <div class="all-department-menu">
+            <!--first flexible container-->
+            <div class="flexible-container-one">
+                <div class="hamburger-container">
+                    <button class="hamburger-button">
+                        <div class="hamburger-menu">
+                            <i class="bi bi-list"></i>
+                            <span class="all-department-text">All</span>    
+                        </div>
+                    </button>
+                    <!--<div class="hamburger-tooltip-hello-signin">
+                            <a href="hamburger-sidebar-signin">
+                                <img src="images/avatar-icon.png" alt="avatar icon">
+                                <span>Hello, Sign in</span>
+                            </a>    
+                    </div>-->
+                    <div class="hamburger-tooltip">
+                        
+                        <div class="trending-container">
+                            <span>Trending</span>
+                        </div>
+                        <div class="best-new-movers-container">
+                            <ul>
+                                <a href="#best-sellers"><li>Best Sellers</li></a>
+                                <a href="#new-releases"><li>New Releases</li></a>
+                                <a href="#movers-shakers"><li>Movers & Shakers</li></a>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="digital-content-container">
+                            <span>Digital Content & Devices</span>
+                        </div>
+                        <div class="digital-content-devices-container">
+                            <ul>
+                                <a href="#prime-video"><li>Prime Video</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#amazon-music"><li>Amazon Music</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#echo-alexa"><li>Echo & Alexa</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#fire-tablets"><li>Fire Tablets</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#fire-tv"><li>Fire TV</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="amazon-luna"><li>Amazon Luna</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#kindle-e-readers"><li>Kindle E-Readers & eBooks</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#audible-books"><li>Audible Books & Originals</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#amazon-photos"><li>Amazon Photos</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#amazon-appstore"><li>Amazon Appstore</li><i class="bi bi-chevron-right"></i></a>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="shop-by-department-tittle">
+                            <span>Shop By Department</span>
+                        </div>
+                        <div class="shop-by-department-container">
+                            <ul class="shop-by-department-container-links">
+                                <a href="#clothing-shoes-jewelry-watches" class="shop-by-department-container-link"><li>Clothing, Shoes, Jewelry & Watches</li>
+                                <i class="bi bi-chevron-right"></i></a>
+                                <a href="#amazon-fresh" class="shop-by-department-container-link"><li>Amazon Fresh</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#whole-food-market" class="shop-by-department-container-link"><li>Whole Foods Market</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#books" class="shop-by-department-container-link"><li>Books</li><i class="bi bi-chevron-right"></i></a>
+                                <div class="see-all">
+                                    <button class="button-see-all"><span>See All</span><i class="bi bi-chevron-down"></i></button>
+                                </div>
+                                <div class="remaining-links"></div>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="shop-by-department-tittle">
+                            <span>Programs & Features</span>
+                        </div>
+                        <div class="shop-by-department-container">
+                            <ul class="shop-by-department-container-links">
+                                <a href="#clothing-shoes-jewelry-watches" class="programs-features-container-link"><li>Medical Care & Pharmacy</li>
+                                <i class="bi bi-chevron-right"></i></a>
+                                <a href="#amazon-fresh" class="programs-features-container-link"><li>Amazon Physical Stores</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#whole-food-market" class="programs-features-container-link"><li>Amazon Haul</li><i class="bi bi-chevron-right"></i></a>
+                                <a href="#books" class="programs-features-container-link"><li>Amazon Business</li><i class="bi bi-chevron-right"></i></a>
+                                <div class="see-all">
+                                    <button class="button-see-all"><span>See All</span><i class="bi bi-chevron-down"></i></button>
+                                </div>
+                                <div class="remaining-links-programs-features"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="amazon-haul-container"> 
+                    <a href="#amazon-haul">
+                        <div class="amazon-haul">
+                            <span>Amazon-Haul</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="medical-care-container">
+                    <a href="#medical-care">
+                        <div class="medical-care">
+                            <span>Medical Care</span>
+                            <i class="bi bi-caret-down-fill"></i>   
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="amazon-basics-container">
+                    <a href="#amazon-basics">
+                        <div class="amazon-basics">
+                            <span>Amazon Basics</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="best-sellers-container">
+                    <a href="#best-sellers">
+                        <div class="best-sellers">
+                            <span>Best Sellers</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="books-container">
+                    <a href="#books">
+                        <div class="books">
+                            <span>Books</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="new-releases-container">
+                    <a href="#new-releases">
+                        <div class="new-releases">
+                            <span>New Releases</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="registry-container">
+                    <a href="#registry">
+                        <div class="registry">
+                            <span>Registry</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="today-deal-container">
+                    <a href="#today-deal">          
+                        <div class="today-deal">
+                            <span>Today's Deals</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gift-cards-container">
+                    <a href="#gift-cards">
+                        <div class="gift-cards">
+                            <span>Gift Cards</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--second flexible container-->
+            <div class="flexible-container-two">
+                <div class="smart-home-container">
+                    <a href="#smart-home">
+                        <div class="smart-home">
+                            <span>Smart Home</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="groceries-container">
+                    <a href="#groceries">
+                        <div class="groceries">
+                            <span>Groceries</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="prime-container">
+                    <a href="#prime">
+                        <div class="prime">
+                            <span>Prime</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="pharmacy-container">
+                    <a href="#pharmacy">
+                        <div class="pharmacy">
+                            <span>Pharmacy</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="customer-service-container">
+                    <a href="#customer-service">
+                        <div class="customer-service">
+                            <span>Customer Service</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-container">
+                    <a href="#music">
+                        <div class="music">
+                            <span>Music</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="amazon-home-container">
+                    <a href="#amazon-home">
+                        <div class="amazon-home">
+                            <span>Amazon Home</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="fashion-container">
+                    <a href="#fashion">
+                        <div class="fashion">
+                            <span>Fashion</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="toys-games-container">
+                    <a href="#toys-games">
+                        <div class="toys-games">
+                            <span>Toys & Games</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sports-outdoors-container">
+                    <a href="#sports-outdoors">
+                        <div class="sports-outdoors">
+                            <span>Sports & Outdoors</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End of header section-->
+    <main>
+        <!--Prime cart-->
+        <div class="shopping-cart-prime-card-section">
+            <div class="leftpage-section"></div>
+            <div class="shopping-cart-prime-card-container">
+                <div class="shopping-cart-prime-inner-container">
+                    <div class="shopping-cart-prime-card">
+                        <img src="images/amazon-prime-rewards-visa-signature-card.webp" alt="prime-card">
+                        <span class="card-text">$150 instant gift card</span>
+                    </div>
+                    <div class="shopping-cart-prime-card-text">
+                        <div class="name-congrat-container">
+                            <span class="client-congratulations js-jean-get">Jean</span>
+                            <span class="client-congratulations"> thank you for being a prime member</span>
+                        </div>
+                        <div class="get-approval">Get 
+                            <a href="#">$150 Amazon Gift Card instantly</a>
+                            upon approval for <span class="prime-visa">Prime Visa</span>
+                        </div>
+                    </div>
+                    <div class="shopping-cart-prime-learn-button">
+                        <button class="shopping-cart-prime-card-btton">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+        <!--End of the prime card in the shopping cart-->
+        <div class="add-elegibility-for-protection-section">
+            <div class="leftpage-section"></div>
+            <div class="elegibility-for-protection-container">
+                <i class="bi bi-info-circle-fill"></i>
+                <a href="#addprotection">add protection</a>
+                <span class="for-eligible-items">for eligible items</span>
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+        <!--Beginning of the cart items-->
+        <div class="shopping-cart-proceed-to-checkout-section">
+            <div class="leftpage-section"></div>
+            <div class="shopping-cart-proceed-to-checkout-container">
+                <div class="shopping-cart-checkbox-image-name-price-container">
+                    <div class="shopping-cart-title-price-container">
+                        <span class="shopping-cart-title">Shopping Cart</span>
+                        <div class="select-all-items">
+                            <a href="shoppingCart.html">select all items</a>
+                        </div>
+                        <span class="item-price-title">Price</span>
+                        <div class="shopping-cart-horizontal-line"></div>
+                        <div class="shopping-cart-checkbox-img-itemName-price-container">
+                            
+                        </div>
+                    </div>
+                    <div class="shopping-cart-bottom-subtotal-container">
+                        <span class="shopping-cart-bottom-numItem">Subtotal(9 items):</span>
+                        <span class="shopping-cart-bottom-subtotal">$906.17</span>
+                    </div>
+                </div>
+                <div class="subtotal-proceed-checkout-related-products-container">
+                    <div class="shopping-cart-subtotal-proceed-section">
+                        <div class="shopping-cart-subtotal-container">
+                            <span class="shopping-cart-subtotal">Subtotal</span>
+                            <span class="shopping-cart-number-item"></span>
+                            <span class="shopping-cart-price"><i class="bi bi-currency-dollar"></i></span>
+                        </div>
+                        <div class="subtotal-checkbox-container">
+                            <input type="checkbox" class="subtotal-checkbox">
+                            <span class="order-contains-gift">This order contains gift</span>
+                        </div>
+                        <div class="shopping-cart-proceed-to-checkout">
+                            <div class="price-in-details">
+                                <mark class="shopping-cart-price-in-dollar">
+                                    <span class="or">or</span>
+                                    <span class="shopping-cart-dollar-sign"><i class="bi bi-currency-dollar"></i></span>
+                                    <span class="shopping-cart-dollars-amount-weekly-payment">40</span>
+                                    <span class="shopping-cart-cents-weekly-payment">15</span>
+                                </mark>
+                                <span class="number-of-weeks">/4 weeks at 0% APR</span>
+                            </div>
+                            <a href="#">Select plan</a>
+                            <div class="add-to-cart-proceed-to-checkout-button">
+                                <a href="placeOrder.html">
+                                    <button class="proceed-to-checkout-button">Proceed to checkout</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business-logo-section">
+                        <img src="images/amazon-business.png" alt="amazon-bussiness-logo">
+                        <div class="shopping-for-work-container">
+                            <div class="shopping-for-work-title">
+                                <span class="shopping-title">Shopping for work?</span>
+                                <span class="get-percent-off">Get 25% off up to your first order.
+                                    <a href="#">Terms</a>
+                                </span>
+                            </div>
+                            <div class="three-boxes-image">
+                                <img src="images/three-boxes.png" alt="three-boxes-img">
+                            </div>
+                        </div>
+                        <div class="create-bussiness-account">
+                            <button class="create-bussiness-account-button">
+                                Create a free bussiness account
+                            </button>
+                        </div>
+                        <div class="account-to-bussiness-account-container">
+                            <span class="account-to-bussiness">
+                                Your account will carry over to your business account
+                            </span>
+                        </div>
+                    </div>
+                    <div class="related-products-with-fast-delivery-section1">
+                        <div class="related-products-title-container">
+                            <span class="related-products-title">Related products with fast delivery</span>
+                        </div>
+
+                        <div class="related-products-with-fast-delivery-section">
+                        <div class="image-item-name-star-price-delivery-container">
+                            <img src="images/electronic-images/mobdik-1.jpg" alt="image-alium">
+                            <div class="item-name-star-price-delivery-container">
+                                <a href="#">Arduino porta Hat...</a>
+                                <img src="images/star-2.png" alt="star">
+                                <div class="shopping-cart-price-in-dollar">
+                                    <span class="shopping-cart-dollar-sign-related-products"><i class="bi bi-currency-dollar"></i></span>
+                                    <span class="shopping-cart-dollars-amount-related-products">170</span>
+                                    <span class="shopping-cart-cents-related-products">15</span>
+                                </div>
+                                
+                                <div class="prime-delivery-add-to-cart-button">
+                                    <span class="shopping-cart-check-icon-prime"><i class="bi bi-check-lg"></i>prime</span>
+                                    <div class="free-delivery-container">
+                                        <span class="free-delivery">FREE Delivery</span>
+                                        <span class="delivery-date-related-product">Thu, May 28</span>
+                                    </div>
+                                    <div class="shopping-cart-add-to-cart-button-container">
+                                        <button class="shopping-cart-add-to-cart-button">add to cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="rightpage-section"></div>
+
+        </div>
+
+        <!--modal popup window when pressing share button-->
+        <div class="share-overlay js-share-overlay">
+
+            <div class="share-modal">
+
+                <div class="share-header">
+
+                    <span class="share-title">
+                        Share this product with friends
+                    </span>
+
+                    <button class="close-share js-close-share">
+                        ✕
+                    </button>
+
+                </div>
+
+                <div class="share-icons">
+
+                    <div class="share-option email">
+                        <i class="bi bi-envelope"></i>
+                        <span>Email</span>
+                    </div>
+
+                    <div class="share-option pinterest">
+                        <i class="bi bi-pinterest"></i>
+                        <span>Pinterest</span>
+                    </div>
+
+                    <div class="share-option facebook">
+                        <i class="bi bi-facebook"></i>
+                        <span>Facebook</span>
+                    </div>
+
+                    <div class="share-option twitter">
+                        <i class="bi bi-twitter-x"></i>
+                        <span>X</span>
+                    </div>
+
+                </div>
+
+                <div class="share-link-container">
+
+                    <input
+                        type="text"
+                        class="share-link-input js-share-link"
+                        readonly
+                    >
+
+                    <button class="copy-link-btn js-copy-link">
+                        Copy Link
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--End modal popup window-->
+
+        <!--bottom page carousel section-->
+        <div class="last-bottom-container">
+            <div class="title1-section">
+                <div class="leftpage"></div>
+                <div class="title1-container">
+                    
+                    <div class="title-pagenum-container">
+                        <span>Customer who viewed this item also viewed</span>
+                    </div>
+                    
+                </div>
+                <div class="rightpage"></div>
+            </div>
+            <!--Featured items to consider itself section-->
+            <div class="checkout-carousel-container">
+                <div class="leftpage"></div>
+                <div class="checkout-carousel">
+                    <span class="page-num">Page <span class="current-page">0</span> of <span class="total-pages">0</span></span>
+                    <button class="checkout-arrow left">&#10094;</button>
+                    <div class="checkout-carousel-track">
+                        
+                    </div>
+                    <button class="checkout-arrow right">&#10095;</button>
+                </div>
+                <div class="rightpage"></div>
+            </div>
+            <!--End of Customer who viewed this item also viewed section-->
+
+            <!--Best Sellers in Grocery and Gourmet Foods Section-->
+            <div class="title1-section">
+                <div class="leftpage"></div>
+                <div class="title1-container">
+                    <!--<div class="title1-hr"></div>-->
+                    <div class="title-pagenum-container">
+                        <span>Best Sellers in Grocery and Gourmet Foods</span>
+                    </div>
+                    
+                </div>
+                <div class="rightpage"></div>
+            </div>
+            <!--Best Sellers in Grocery and Gourmet Foods itself section-->
+            <div class="checkout-carousel-container">
+                <div class="leftpage"></div>
+                <div class="checkout-carousel">
+                    <span class="page-num">Page <span class="current-page">0</span> of <span class="total-pages">0</span></span>
+                    <button class="checkout-arrow left">&#10094;</button>
+                    <div class="checkout-carousel-track">
+                        
+                    </div>
+                    <button class="checkout-arrow right">&#10095;</button>
+                </div>
+                <div class="rightpage"></div>
+            </div>
+            <!--End of Best sellers in Grocery and Gourmet Food section-->
+            <div class="title1-section">
+                <div class="leftpage"></div>
+                <div class="title1-container">
+                    <div class="title1-hr"></div>
+                </div>
+                <div class="rightpage"></div>
+            </div>*
+            <!--Personalized recommendations section-->
+            <div class="personalized-recom-section">
+                <div class="leftpage-section"></div>
+                <div class="personalized-recom">
+                    <div class="text-signin">
+                        <span class="text">See personalized recommendations</span>
+                        <a href="sign_in.html"><button class="signin-bottom-button">Sign in </button></a>
+                        <div class="sign-here">
+                            <span>New customer?</span>
+                            <a href="sign_in.html">Start here.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightpage-section"></div>
+            </div>
+        <!--End of personlized recommendations-->
+        </div>
+    
+        <!-- End of bottom Carousel Section-->
+
+        <!--Back to the top of the page  section-->
+        <div class="back-to-top">
+            <div class="leftpage-section"></div>
+            <a href="amazon.html">
+                <div class="go-to-top">
+                    <span>Back to top</span>
+                </div>
+            </a>
+            <div class="rightpage-section"></div>
+        </div>
+        <div class="amazon-botton-link">
+            <div class="leftpage-section"></div>
+            <div class="links">
+                <div class="first-column">
+                    <div class="title-links">Get to Know Us</div>
+                    <span>
+                        <a href="#">Careers</a><br>
+                        <a href="#">Newsletter</a><br>
+                        <a href="#">About Amazon</a><br>
+                        <a href="#">Investor Relations</a><br>
+                        <a href="#">Accessibility</a><br>
+                        <a href="#">Sustainability</a><br>
+                        <a href="#">Press Center</a><br>
+                        <a href="#">Investor Relations</a><br>
+                        <a href="#">Amazon Devices</a><br>
+                        <a href="#">Amazon Science</a>
+                    </span>
+                </div>
+                <div class="second-column">
+                    <div class="title-links">Make Money with Us</div>
+                    <span>
+                        <a href="#">Sell on Amazon</a><br>
+                        <a href="#">Sell apps on Amazon</a><br>
+                        <a href="#">Supply to Amazon</a><br>    
+                        <a href="#">Protect & Build Your Brand</a><br>
+                        <a href="#">Become an Affiliate</a><br>
+                        <a href="#">Become a Delivery Driver</a><br>
+                        <a href="#">Start a Package Delivery Business</a><br>
+                        <a href="#">Advertise Your Products</a><br>
+                        <a href="#">Self-Publish with Us</a><br>
+                        <a href="#">Become an Amazon Hub Partner</a><br>
+                        <a href="#">See More Ways to Make Money</a>
+                    </span>
+                </div>
+                <div class="third-column">
+                    <div class="title-links">Amazon Payment Products</div>
+                    <span>
+                        <a href="#">Amazon Visa</a><br>
+                        <a href="#">Amazon Store Card</a><br>
+                        <a href="#">Amazon Secured Card</a><br>
+                        <a href="#">Amazon Business Card</a><br>
+                        <a href="#">Shop with Points</a><br>
+                        <a href="#">Credit Card Marketplace</a><br>
+                        <a href="#">Reload Your Balance</a><br>
+                        <a href="#">Gift Cards</a><br>
+                        <a href="#">Amazon Currency Converter</a>
+                    </span>
+                </div>
+                <div class="fourth-column">
+                    <div class="title-links">Let Us Help You</div>
+                    <span>
+                        <a href="#">Your Account</a><br>
+                        <a href="#">Your Orders</a><br>
+                        <a href="#">Shipping Rates & 
+                        Policies</a><br>
+                        <a href="#">Amazon Prime</a><br>
+                        <a href="#">Returns & <br>
+                        Replacements</a><br>
+                        <a href="#">Manage Your Content<br> 
+                        and Devices</a><br>
+                        <a href="#">Recalls and Product<br> 
+                        Safety Alerts</a><br>
+                        <a href="#">Information about <br>
+                        the FTC</a><br> 
+                        <a href="#">Prime settlement<br>
+                        Registry & Gift List</a><br>
+                        <a href="#">Help</a>
+                    </span>
+                </div>    
+            </div>
+            <div class="rightpage-section"></div>
+        </div> 
+        <!--Amazon bottom main page logo and language and flag section-->
+        <div class="bottom-logo-lang-flag">
+            <div class="leftpage-section"></div>
+            <div class="before-footer-links">
+                <img src="images/amazon-logo.png" alt="amazon-logo">
+                <div class="bottom-button">
+                    <button class="but-buttom">
+                        <i class="bi bi-globe"></i><span> English </span>
+                        <img src="images/up-down.png" alt="up-down">
+                    </button>
+                </div>    
+                <div class="bottom-button">
+                    <button class="but-buttom">
+                        <img src="images/United State flag.png" alt="up-down">
+                        <span>United States</span>
+                    </button>
+                </div>    
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+
+        <!--last section of each page (footer)-->
+        <div class="last-links-section">
+            <div class="leftpage-section"></div>
+            <div class="last-links-container">
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Music</span> <br>
+                            <span>streams millions of songs</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Business</span> <br>
+                            <span>Everything for your business</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Goodreads</span> <br>
+                            <span>Books reviews & recommendations</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Resale</span> <br>
+                            <span>Great deal on quality used products</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Ads</span> <br>
+                            <span>Reach customers wherever they spend their time</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Fresh</span> <br>
+                            <span>Groceries & More Right to your Door</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">IMDb</span> <br>
+                            <span>Movies, TV & Celebrities</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Whole Foods Market</span> <br>
+                            <span>America's Helthiest Grocery Stores</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Neighbors App</span> <br>
+                            <span>Real-time Crime & Safety Alerts</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">6pm</span> <br>
+                            <span>Score Deal on Fashion Brands</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Global</span> <br>
+                            <span>Ship Orders internationally</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">IMDbpro</span> <br>
+                            <span>Get info Entertainment Professionals</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Woot</span> <br>
+                            <span>Deals & Discounts</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Subcription Boxes</span> <br>
+                            <span>Top Subcription Boxes-Right to your Door</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">AbeBooks</span> <br>
+                            <span>Books, art & collectibles</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Home Service</span> <br>
+                            <span>Experienced Pros Happiness Guarantee</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Kindle Direct Publishing</span> <br>
+                            <span>Indie Digital & Print Publishing Made Easy</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Zappos</span> <br>
+                            <span>Shoes & Clothing</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">PillPack</span> <br>
+                            <span>Pharmacy Simplified</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">ACX</span> <br>
+                            <span>Audiobook Publishing Made Easy</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Web Services</span> <br>
+                            <span>Scalable Cloud Computing Services</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Photos</span> <br>
+                            <span>Unlimited Photo Storage</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Ring</span> <br>
+                                    <span>Smart Security for every Home</span>    
+                                </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Amazon Renewed</span> <br>
+                            <span>Refurbished tech you can trust</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Veeqo</span> <br>
+                            <span>Shipping Software Inventory Management</span>     
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Box Office Majo</span> <br>
+                            <span>Find Movies Box Office data</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">ShopBop</span> <br>
+                            <span>Design Fashion Brands</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Blink</span> <br>
+                            <span>Smart Security for every Home</span>    
+                        </div>
+                    </a>
+                </div>
+                <div class="last-links-column">
+                    <a href="#Amazon-music">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Sell on Amazon</span> <br>
+                            <span>Start a selling account</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-business">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Audible</span> <br>
+                            <span>Listen to Books & Original Audio Performances</span>    
+                        </div>
+                    </a>
+                    <a href="#Goodreads">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">Prime Videos Direct</span> <br>
+                            <span>Videos Distribution Made Easy</span>    
+                        </div>
+                    </a>
+                    <a href="#Amazon-resale">
+                        <div class="footer-last-links">
+                            <span class="amazon-music-footer">eero WIFI</span> <br>
+                            <span>Stream 4k Videos in every Rooms</span>    
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+        <div class="conditions-of-use-section">
+            <div class="leftpage-section"></div>
+            <div class="conditions-of-use-copyright-container">
+                <div class="conditions-of-use-container">
+                    <span><a href="#conditions-of-use">Conditions of Use</a></span>
+                    <span><a href="#privacy-notice">Privacy Notice</a></span>
+                    <span><a href="#privacy-notice">Consumer Health Data Privacy Disclosure</a></span>
+                    <span><a href="#interest-based-ads">Your Ads Privacy Choices</a></span>
+                </div>
+                <span>© 1996-2026, Amazon.com, Inc. or its affiliates</span>
+            </div>
+            <div class="rightpage-section"></div>
+        </div>
+        <!--End of footer section-->
+    </main>
+
+    <script src="data/products.js"></script>
+    <script src="scripts/nav-bar.js"></script>
+    <script src="scripts/shoppingCart.js"></script> 
+</body>
+</html>

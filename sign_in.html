@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="styles/sign_in.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+    <!--BootStrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS link-->
+    <!--BootStrap Icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="sign-in-section">
+        <div class="left-page"></div>
+        <div class="amazon-logo-sign-in-section">
+            <div class="amazon-logo">
+                <img src="images/amazon-logo2.png" alt="Amazon Logo2">
+            </div>
+            <div class="sign-in-container">
+                <div class="sign-in-or-create-account">
+                    <span>Sign in or Create account</span>
+                </div>
+                <div class="email-text-input">
+                    <form class="signup-form">
+
+                        <span class="enter-username hidden">Enter username</span>
+                        <input type="text" class="username-input hidden" placeholder="Username">
+                        
+                        <span class="enter-email">Enter email</span>
+                        <input type="email" class="email-input" placeholder="Email">
+                        
+                        
+                        <span class="enter-password">Enter password</span>
+                        <div class="password-input-eye-icon">
+                           <input type="password" class="password-input" placeholder="Password">
+                           <button class="eye-icon"> <i class="bi bi-eye-slash-fill"></i></button>
+                        </div>
+                        
+                        <button class="sign-in-button" type="submit">Sign in</button>
+                    </form>
+                    <div class="message-position-relative-container">
+                        <div class="message hidden"></div>
+                        <div class="cross-icon hidden"><i class="bi bi-x"></i></div>
+                    </div>
+                    
+                </div>
+                <div class="conditions-neeed-buy-create-account">
+                    <span class="conditions-of-use">By continuing, you agree to Amazon's 
+                        <a href="#">Conditions of Use</a> and 
+                        <a href="#">Privacy Notice</a>.
+                    </span>
+                    <a href="#">Need help?</a>
+                    <div class="horizontal-line"></div>
+                    <div class="create-account">
+                    <span>Don't have an account?</span>
+                    <a href="sign_in.html" class="js-create-account">Create account</a>
+                </div>
+                </div>    
+            </div>
+        </div>
+        <div class="right-page"></div>
+    </div>
+    <div class="line-container">
+        <div class="left-page"></div>
+        <div class="line"></div>
+        <div class="left-page"></div>
+    </div>
+    <div class="line-container">
+        <div class="left-page"></div>
+        <div class="sign-bottom-links">
+            <div class="condition-privacy-help">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="sign-rights-reserved">© 1996-2026, Amazon.com, Inc. or its affiliates</div>
+        </div>
+        <div class="left-page"></div>
+    </div>
+
+    <script src="scripts/sign_in.js"></script>
+    
+</body>
+</html>

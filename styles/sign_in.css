@@ -1,0 +1,298 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  /*background-color: rgb(202, 199, 199) !important;*/   
+}
+
+.sign-in-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.amazon-logo-sign-in-section{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    flex-shrink: 0;
+    width: 1460px;
+    height: auto;
+}
+
+.left-page,
+.right-page{
+    flex: 1;
+}
+
+.amazon-logo{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.amazon-logo img{
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.sign-in-container{
+    /*border: 1px solid green;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    /*width: 400px;
+    height: 250px;*/
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 320px;
+    margin-top: 30px;
+}
+
+.sign-in-or-create-account{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.signup-form,
+.email-text-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    
+    
+}
+
+.conditions-of-use{
+    font-family: Nunito, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.username-input,
+.email-input,
+.password-input{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 270px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 4px;
+}
+
+.username-input,
+.email-input{
+    margin-bottom: 10px;
+}
+
+.enter-username,
+.enter-password,
+.enter-email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.enter-email{
+    margin-left: -196px;
+}
+.enter-password{
+    margin-left: -166px;
+}
+.enter-username{
+    margin-left: -166px;
+}
+
+/*.enter-username,
+.username-input{
+    display: none;
+}*/
+
+.username-input:focus-within, 
+.password-input:focus-within, 
+.email-input:focus-within  {
+    border: 3px solid #21ef40;      
+}     
+.sign-in-button{
+    width: 270px;
+    height: auto;
+    border: none;
+    background-color: #ffbd00;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+.password-input-eye-icon{
+    position: relative;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    border: none;
+    background-color: white;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Nunito, Arial, Helvetica, sans-serif; 
+    font-size: 15px;
+    width: 270px;
+    height:auto;
+    border: 1px solid grey;
+    box-shadow: rgb(30, 30, 30) 0px 1px 3px, 
+               rgba(250, 250, 250, 0.4) 0px 1px 2px; 
+    padding: 4px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /*background: linear-gradient(
+        to right,
+        #52b788 0%,
+        #52b788 10%,
+        white 10%,
+        white 100%
+    );*/
+}
+
+.green-gradient {
+    background: linear-gradient(
+        to right,
+        #52b788 0%,
+        #52b788 10%,
+        white 10%,
+        white 100%
+    );
+}
+.red-gradient {
+    background: linear-gradient(
+        to right,
+        rgb(244, 67, 67) 0%,
+        rgb(228, 32, 32) 10%,
+        white 10%,
+        white 100%
+    );
+}
+.message-position-relative-container{
+    position: relative;
+}
+.cross-icon{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 25px;
+}
+
+/* hidden is a CSS class*/
+.hidden{
+    display: none;
+}
+.conditions-neeed-buy-create-account{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    margin-left: 24px
+}
+.horizontal-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    width: 270px;
+    height: 2px;
+}
+.create-account{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 5px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+  
+}
+
+.conditions-neeed-buy-create-account a{
+    text-decoration: none;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #134074;
+    font-weight: 600;
+    
+}
+.conditions-of-use a{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #134074;
+
+}
+
+.line-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    background-color: grey;
+    width: 1460px;
+    height: 1px;
+}
+
+.sign-bottom-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.condition-privacy-help{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1460px;
+    justify-content: center;
+    gap: 20px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+.condition-privacy-help a{
+    text-decoration: none;
+    color: #134074;
+    font-weight: 600;
+}
+
+.sign-rights-reserved{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+}

@@ -1,0 +1,187 @@
+.order-page-section{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    padding: 20px;
+    width: 1000px;
+    height: auto;
+    background-color: white;
+    margin-top: 130px;
+}
+
+.your-account-orders-order-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.your-account-orders-order-details a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.order-details-order{
+    color: #fb5607;
+}
+
+.bi.bi-chevron-compact-right{
+    font-size: 10px;
+    color: #01497c;
+}
+
+.order-details-container{
+    /*font-family: Nunito, sans-serif;*/
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.order-place-date-order-number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+.order-return-delivery-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.order-number-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.order-separator{
+    color: grey;
+}
+
+.ship-payment-method-order-summary-section{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.ship-payment-method-section{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 50px;
+}
+
+.order-summary-section,
+.payment-method,
+.ship-order{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.ship-label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.visa-card-ending-code{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.visa-card-ending-code img{
+    width: 40px;
+    height: auto;
+    object-fit: contain
+}
+.view-related-transaction{
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 200px;
+    background-color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.item-subtotal-order{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-between;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.grand-total-price,
+.grand-total-text{
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.add-to-cart-corbeille{
+    border-left: 1px solid rgb(211, 208, 208);
+}
+
+.order-return-track-package.color{
+    background-color: #ffd60a;
+    border: none;
+}
+
+.current-order-date{
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.order-return-first-sample.js-order-return-first-sample{
+    border: none;
+}
+
+.return-or-replace-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    /*font-family: Nunito, Arial, Helvetica, sans-serif;*/
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.order-return-first-sample{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
