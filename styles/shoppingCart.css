@@ -933,5 +933,38 @@ mark{
 }
 /*End of modal popup window*/
 
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES (added)
+   These selectors were hardcoded to fixed desktop pixel widths
+   (700-1760px) above. On a phone screen, a fixed width wider
+   than the device forces the whole page's layout viewport to
+   widen to fit it - even with a correct viewport meta tag - which
+   is why every page required zooming out to see properly. This
+   block does not touch any rule above; it only adds a mobile
+   override that takes priority at narrow widths via the media
+   query and appearing later in the file.
+   ============================================================ */
+@media (max-width: 768px) {
+.shopping-cart-prime-card-container,
+.shopping-cart-prime-inner-container,
+.shopping-cart-proceed-to-checkout-container,
+.shopping-cart-checkbox-image-name-price-container,
+.shopping-cart-title-price-container,
+.shopping-cart-title,
+.select-all-items,
+.item-price-title,
+.shopping-cart-horizontal-line,
+.Shopping-cart-first-item-section,
+.Shopping-cart-first-item-container,
+.elegibility-for-protection-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}
+
+
 
 
