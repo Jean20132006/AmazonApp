@@ -587,7 +587,7 @@
     text-decoration : none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
 .search-bar-container {
     width: 100% !important;
     max-width: 100% !important;
