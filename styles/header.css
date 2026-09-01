@@ -426,7 +426,7 @@ hr{
     border: 1px solid white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
 .flexible-container-one {
     width: 100% !important;
     max-width: 100% !important;
