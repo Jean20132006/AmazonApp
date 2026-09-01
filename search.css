@@ -1,0 +1,452 @@
+body{
+    background-color: white !important;
+    
+    border-radius: 5px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* *: Apply margin: 0 to every element on the page. 
+   *::before: It targets every ::before pseudo-element
+   box-sizing: border-box: Makes the size of item to stay same even if you
+               add padding, border etc. if the width is 300px, it remains 300px
+*/
+
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-shine: rgba(255, 255, 255, 0.10);
+    --accent: #e8c97e;
+    --text-primary: #f5f0e8;
+    --text-muted: rgba(245, 240, 232, 0.55);
+    --shadow-deep: rgba(0, 0, 0, 0.45);
+    /*--glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shine: rgba(255, 255, 255, 0.10);
+    --accent: #e8c97e;
+    --text-primary: #f5f0e8;
+    --text-muted: rgba(245, 240, 232, 0.55);
+    --shadow-deep: rgba(0, 0, 0, 0.15);*/
+  }
+
+.number-of-result-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1760px;
+    height: 50px;
+    border-bottom: 1px solid rgb(202, 201, 201);
+    margin-top: 110px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    box-shadow:
+    0 4px 5px rgba(0,0,0,.15);
+}
+.search-left-page-search-items-section{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    /*gap: 20px;*/
+    height: auto;
+    width: 1760px;
+    margin-top: 30px;
+}
+
+.search-left-page{
+    /*border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 280px;
+    height: auto;
+}
+
+.search-items-container{
+    /*border: 1px solid green;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*gap: 10px;*/
+    width: 1470px;
+    height: auto;
+}
+
+.add-to-cart-corbeille-cart-roll{
+    border-left: 1px solid #dee2e6;
+}
+
+.search-advertissement-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+    width: 1470px;
+    height: auto;
+    background-color: #f8f9fa;
+}
+
+.search-advertissement-section a{
+    text-decoration: none;
+    color: black;
+}
+
+.search-advert-video{
+    width: 600px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.search-advert-img-text-container{
+    border: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*gap: 10px;*/
+    width: 350px;
+    border-radius: 5px;
+}
+
+.advert-image{
+    width: 300px;
+    height: 240px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding-bottom: 10px;
+}
+
+.search-advert-text{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.search-star-rating-review{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    width: 348px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-star-rating-review img{
+    width: 80px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.search-advert-sponsored{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    flex-shrink: 0;
+    width: 1470px;
+    /*font-family: Nunito, Arial, Helvetica, sans-serif;*/
+    font-size: 13px;
+    color: grey;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1470px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.bi.bi-info-circle-fill{
+    margin-left: 5px;
+    color: grey;
+}
+
+.search-products-section{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-shrink: 0;
+    gap: 15px;
+    width: 1470px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    
+}
+
+.search-products-container{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    flex-shrink: 0;
+    gap: 10px;
+    width: 1470px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+.name-star-price-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+    width: 285px;
+    height: auto;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    /*background: #0d0a14;*/
+    background: conic-gradient(
+    from 0deg,
+    #00f5ff,
+    #ff00ea,
+    #00ff85,
+    #00f5ff
+  );
+    
+
+}
+
+.image-name-star-price-container{
+    /*border: 1px solid #dee2e6;*/
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+    width: 285px;
+    height: auto;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 600;
+    
+    
+    position: relative;
+    border-radius: 28px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%); /*backdrop-filter: Blurs what's behind the element*/
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 32px 64px var(--shadow-deep), inset 0 1px 0 var(--glass-shine);
+    overflow: hidden;
+    animation: floatIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.image-name-star-price-container:hover { transform: translateY(-6px); box-shadow: 0 48px 80px var(--shadow-deep), inset 0 1px 0 var(--glass-shine); }
+
+@keyframes floatIn { to { opacity: 1; transform: translateY(0); } }
+
+.add-to-cart-carousel-add-to-cart-button:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgb(211, 211, 12); }
+.add-to-cart-carousel-add-to-cart-button:active { transform: translateY(0); }
+
+.brand{
+    font-weight: bold;
+    font-size: 26px;
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+}
+
+
+.main-image{
+    /*background-color: #f8f9fa;*/
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    width: 283px;
+    height: 280px;
+    object-fit: contain;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    padding-top: 20px;
+    transition: transform 0.6s ease-in-out;
+
+}
+
+.card__image-wrap { position: relative; height: 280px; overflow: hidden; background-color: white}
+
+.card__image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /*background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.9) 0%,
+            rgba(255,255,255,0.9) 30%,
+            transparent 100%
+        );*/
+     background:
+        radial-gradient(
+            circle,
+            white 0%,
+            white 30%,
+            transparent 100%
+        );
+
+
+    filter: blur(20px);
+    z-index: 0;
+    
+}
+
+.card__image-wrap img {
+    position: relative;
+    z-index: 1;
+}
+
+.image-name-star-price-container:hover .main-image { transform: scale(1.05); }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.5);
+    padding: 18px 24px;
+}
+
+.shopping-cart-price-indollar{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    /*font-family: Nunito, sans-serif;*/
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold; 
+    color: black;  
+}
+
+.shopping-cart-dollar-sign{
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.bi.bi-currency-dollar{
+    font-weight: bold;
+    
+}
+
+.shopping-cart-cents{
+    /*font-family: Nunito, sans-serif;*/
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.shopping-cart-dollars-amount{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.search-star-rating-review2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    /*width: 300px;*/
+    font-size: 13px;
+    color: rgb(31, 31, 31);
+
+}
+
+.search-star-rating-review2 img{
+    width: 70px;
+    height: 18px;
+}
+
+.add-to-cart-carousel-add-to-cart-button{
+    width: 120px;
+    color: black;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(195, 138, 5, 0.3);
+}
+
+.search-prime-delivery-date{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.search-delivery-date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    /*font-family: Nunito, Arial, Helvetica, sans-serif;*/
+    font-family: 'Cormorant Garamond', serif;
+    color: black;
+
+}
+
+.search-check-icon-prime{
+    font-weight: bold;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #0160fc;
+}
+
+.bi.bi-check-lg{
+    color: #ff5400;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.search-item-name a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+}
+
+
+
+
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES (added)
+   These selectors were hardcoded to fixed desktop pixel widths
+   (700-1760px) above. On a phone screen, a fixed width wider
+   than the device forces the whole page's layout viewport to
+   widen to fit it - even with a correct viewport meta tag - which
+   is why every page required zooming out to see properly. This
+   block does not touch any rule above; it only adds a mobile
+   override that takes priority at narrow widths via the media
+   query and appearing later in the file.
+   ============================================================ */
+@media (max-width: 768px) {
+.number-of-result-container,
+.search-left-page-search-items-section,
+.search-items-container,
+.search-advertissement-section,
+.search-advert-sponsored,
+.result-container,
+.search-products-section,
+.search-products-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}

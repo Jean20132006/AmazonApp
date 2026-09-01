@@ -1,0 +1,709 @@
+@media (max-width: 455px){
+    .nav-bar-place-order .secure-checkout-container{
+        display: none;
+    }
+}
+
+.nav-bar-place-order{
+    background-color: hsla(128, 50%, 6%, 0.871);
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: auto;
+    padding: 0 20px;
+    box-shadow: 0 0.1vw 0.2vw rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;   
+}
+
+.nav-bar-place-order a{
+    text-decoration: none;
+}
+
+.amazon-logo-secure-checkout-cart-section{
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+}
+
+.logo-location-place-order-container{
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: auto;
+    white-space: nowrap;   /*prevent text wrapping*/
+    flex-shrink: 0;
+    
+}
+
+.secure-checkout-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    margin-top: -5px;
+
+}
+
+.right-place-order-section{
+    display: flex;
+    align-items: center;
+    height: auto;
+    gap: auto;
+    white-space: nowrap;   /*prevent text wrapping*/
+    flex-shrink: 0;
+}
+
+.delivery-pay-place-order-section1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.delivery-pay-place-order-section{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 20px;
+    width: 1460px;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.right-page,
+.left-page{
+    flex-shrink: 1;
+    width: 250px;
+}
+
+.place-order-delivery-pay-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 1000px;   
+}
+
+.placeOrder-delivery-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+
+    border-radius: 10px;
+    background: linear-gradient(
+        to bottom,
+        #a22c29 0%,
+        #a22c29 7%,
+        white 7%,
+        white 100%
+    );
+}
+
+.rapproach-delivery-place{
+    display: flex;
+    flex-direction: column;
+}
+
+.order-destination-change{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.place-order-destination{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.order-destination-change a{
+    text-decoration: none;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    color:#01497c;
+
+}
+
+.placeOrder-delivery-container a{
+    text-decoration: none;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#01497c;
+}
+
+.destination-name-container{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+
+.place-order-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 460px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    background: linear-gradient(
+        to bottom,
+        #01497c 0%,
+        #01497c 3%,
+        white 3%,
+        white 100%
+    );
+}
+
+.place-order-button{
+    background-color: #ffd000;
+    width: 400px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.place-order-amazon-policy-order{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.place-order-amazon-policy-order a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.place-order-horizontal-line{
+    background-color: grey;
+    width: 400px;
+    height: 1px;
+}
+
+.items-shipping-tax-total-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.number-items-price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    /*font-weight: 600;*/
+    color: black;
+}
+
+.place-order-total-price,
+.place-order-total{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/*Gift card section CSS*/
+
+.place-order-amazon-gift-card-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.place-order-amazon-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1460px;
+}
+
+.gift-card-place-order{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 985px;
+    background-color: white;
+    height: 130px;
+    
+}
+
+.gift-card-place-order-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 750px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
+
+.place-order-get-amazon-gift-card{
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    height: 92px;
+    margin-top: 1px;
+    padding-right: 20px;
+}
+
+.place-order-gift-card-text{
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
+}
+.upon-approval{
+    color: black;
+}
+
+.place-order-get-amazon-gift-card a{
+    text-decoration: none;
+    color: #01497c;
+}
+/*End of gift card CSS*/
+
+/*First Item in the cart CSS*/
+
+.place-order-cart-first-item-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.place-order-first-item-full-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1460px;   
+}
+
+.place-order-first-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-shrink: 0;
+    gap: 20px;
+    padding: 20px;
+    width: 985px;
+    background-color: white;
+    height: auto;
+    margin-bottom: 20px; 
+}
+
+.arraving-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.image-item-name-price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 20px;
+    width: 570px;
+    background-color: rgb(249, 246, 246);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.image-minus-plus-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.image-item-name-price-container img{
+    width: 175px;
+    height: auto;
+    object-fit: contain;
+    background-color: rgb(249, 246, 246);
+}
+
+.item-name-price-place-order{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 400px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.price-place-order-cart{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.item-name-price-place-order a{
+    text-decoration: none;
+    color: #01497c;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.gift-option-place-order{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+
+.place-order-button-gift-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.add-to-cart-num-items,
+.add-to-cart-plus-sign{
+    font-size: 16px;
+    font-weight: bold;
+}
+.add-to-cart-delete-add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    height: 35px;
+    background-color: white;
+    border: 3px solid #ffd60a;
+    border-radius: 17px;
+    font-family: Nunito, sans-serif;
+    padding: 5px;
+}
+.cart-action-btn,
+.add-to-cart-plus-sign,
+.add-to-cart-delete-button{
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 20px;
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.bi.bi-plus-lg,
+.bi.bi-trash{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.shopping-cart-check-icon-prime{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0466c8;
+}
+
+.bi.bi-check-lg{
+    color: #e36414;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.product-delivery-date{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 30px;
+}
+
+.radio-input-delivery-date{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    width: 340px;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.radio-first-interval-date{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 10px;
+}
+
+.delivery-date{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.delivery-options-free{
+    margin-left: 30px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.bottom-order-total-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bottom-order-full-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1460px;
+}
+
+.place-order-button-total-order-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 20px;
+    width: 985px;
+    background-color: white; 
+    padding: 20px;
+}
+
+.place-order-bottom-button{
+    border: none;
+    width: 200px;
+    background-color: #ffd000;
+    border-radius: 15px;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    /*color: black;*/
+}
+
+.bottom-total-order-price{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.bottom-amazon-policy-container{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.bottom-amazon-policy-container a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.total-order-amazon-policy-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 700px;
+}
+
+.bottom-total-price-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+/*Place order confirmation CSS*/
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.success-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-overlay.is-active .success-card {
+  transform: translateY(0) scale(1);
+}
+
+.checkmark-svg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 3;
+  stroke: #10b981; 
+  stroke-miterlimit: 10;
+  margin: 0 auto 20px auto;
+  box-shadow: inset 0px 0px 0px #10b981;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  stroke: #10b981;
+  fill: none;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+}
+
+.success-overlay.is-active .checkmark-circle {
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-overlay.is-active .checkmark-svg {
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.success-overlay.is-active .checkmark-check {
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+.success-text {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.success-overlay.is-active .success-text {
+  animation: fadeUp 0.5s ease forwards 0.8s; 
+}
+
+.success-text h3 {
+  margin: 0 0 8px 0;
+  color: #0f172a;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.success-text p {
+  margin: 0 0 24px 0;
+  color: #64748b;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.close-btn {
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  transition: background 0.2s;
+}
+
+.success-overlay.is-active .close-btn {
+  animation: fadeUp 0.5s ease forwards 1s; 
+}
+
+.close-btn:hover {
+  background-color: #334155;
+}
+
+@keyframes stroke {
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes scale {
+  0%, 100% { transform: none; }
+  50% { transform: scale3d(1.1, 1.1, 1); }
+}
+@keyframes fill {
+  100% { box-shadow: inset 0px 0px 0px 30px rgba(16, 185, 129, 0.1); }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES (added)
+   These selectors were hardcoded to fixed desktop pixel widths
+   (700-1760px) above. On a phone screen, a fixed width wider
+   than the device forces the whole page's layout viewport to
+   widen to fit it - even with a correct viewport meta tag - which
+   is why every page required zooming out to see properly. This
+   block does not touch any rule above; it only adds a mobile
+   override that takes priority at narrow widths via the media
+   query and appearing later in the file.
+   ============================================================ */
+@media (max-width: 768px) {
+.delivery-pay-place-order-section,
+.place-order-delivery-pay-container,
+.place-order-amazon-container,
+.gift-card-place-order,
+.gift-card-place-order-container,
+.place-order-first-item-full-row,
+.place-order-first-item-container,
+.bottom-order-full-line,
+.place-order-button-total-order-container,
+.total-order-amazon-policy-bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}

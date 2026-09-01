@@ -1,0 +1,477 @@
+body{
+    background-color: white !important;
+}
+.order-return-buy-again-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-return-buy-again-container{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    width: 1460px;
+    height: auto;
+    flex-shrink: 0;
+    justify-content: right;
+    gap: 10px;    
+}
+
+.order-return-section{
+    /*border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    padding: 20px;
+    width: 1000px;
+    height: auto;
+}
+
+.your-orders-return-account{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.your-orders-return-account a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.order-details-order{
+    color: #fb5607;
+}
+
+.orders-input-search-button-search-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    justify-content: space-between;
+}
+
+.orders-your-big-title{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.input-search-button-search-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.orders-input-search::placeholder{
+    font-family: Nunito, sans-serif;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.orders-input-search{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px;
+    width: 300px;
+}
+
+.search-icon-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.orders-search-button{
+    border: none;
+    border-radius: 20px;
+    padding: 3px;
+    background-color: black;
+    color: white; 
+    width: 130px;   
+}
+
+.orders-search-button-text{
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.orders-buy-again-shipped-digital-amazon-pay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.orders-buy-again-shipped-digital-amazon-pay-horizontal-line{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.orders-buy-again-shipped-digital-amazon-pay a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.orders-third-row{
+    font-weight: bold;
+    border-bottom: 2px solid #fb5607;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+.orders-buy-again-shipped-digital-amazon-pay .link-buy-again:hover{
+    text-decoration: underline;
+}
+
+.order-return-horizontal-line{
+    height: 1px;
+    background-color: rgb(226, 222, 222);
+}
+
+.orders-in-the-last-months{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+}
+
+select{
+    padding: 5px;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.number-of-orders{
+    font-weight: bold;
+}
+
+.orders-in-the-last-months-text{
+    font-weight: 400;
+}
+
+ /*order start*/
+.order-return-first-sample{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /*border: 1px solid grey;
+    border-radius: 10px;*/
+}
+
+.oder-return-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(247, 245, 245);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    /*border-top: 1px solid grey;*/
+}
+
+.the-three-first-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.order-return-placed{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.order-return-placed-order-number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-family: Nunito, sans-serif;
+    justify-content: right;
+}
+
+.order-return-name{
+    color: #01497c;
+    font-weight: 600;
+}
+
+.view-order-invoice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+}
+
+.view-order-invoice a{
+    text-decoration: none;
+    color: #01497c;
+}
+
+.separator-line{
+    color: grey;
+}
+
+.alexa-button{
+    padding: 20px;
+}
+
+.alexa-button-container{
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid grey;
+    border-radius: 20px;
+    background-color: white;
+    width: 250px;
+    padding: 4px;
+}
+
+.alexa-button-container img{
+    width: 15px;
+    height: auto;
+    object-fit: contain;
+}
+
+.after-alexa-separator-line{
+    height: 1px;
+    background-color: rgb(226, 222, 222);
+}
+
+.deliverydate-item-image-buttons-section{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.delivery-item-image-section{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: Nunito, sans-serif;
+}
+
+.order-return-delivery-date-message{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+.order-return-delivery{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.order-return-message{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.image-item-name-buy-again-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    gap: 30px;
+}
+
+.item-name-buy-again-button{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 450px;
+}  
+
+.item-name-buy-again-button a{
+    text-decoration: none;
+    color: #01497c;
+    font-weight: 600;
+}
+
+.image-item-name-buy-again-button img{
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.return-or-replace{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.order-return-buy-again-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffd60a;
+    border: none;
+    border-radius: 20px;
+    width: 150px; 
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.buttons-section{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+.order-return-track-package{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 20px;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.sub-save-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.bi.bi-cart4{
+    font-size: 12px;
+    margin-left: -21px;
+    margin-right: 20px;
+    margin-top: -3px;
+}
+.bi.bi-arrow-repeat{
+    margin-left: 5px;
+    font-size: 30px;
+    /*color:#ffba08;*/
+    color: black;   
+}
+
+.buy-again-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 320px;
+    height: auto;
+   
+}
+
+.business-logo-section{
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.related-products-with-fast-delivery-section1{
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.create-bussiness-account-button{
+    background-color: #ffd60a;
+    border: none;
+}
+
+.order-roaster-section{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+
+}
+.order-roaster-container{
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    border-radius: 10px;
+    
+}
+
+.header-alexa-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.order-return-track-package.color{
+    background-color: #ffd60a;
+    border: none;
+}
+
+.order-return-delivery-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES (added)
+   These selectors were hardcoded to fixed desktop pixel widths
+   (700-1760px) above. On a phone screen, a fixed width wider
+   than the device forces the whole page's layout viewport to
+   widen to fit it - even with a correct viewport meta tag - which
+   is why every page required zooming out to see properly. This
+   block does not touch any rule above; it only adds a mobile
+   override that takes priority at narrow widths via the media
+   query and appearing later in the file.
+   ============================================================ */
+@media (max-width: 768px) {
+.order-return-buy-again-container,
+.order-return-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}
