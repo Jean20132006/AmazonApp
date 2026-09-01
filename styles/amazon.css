@@ -1129,7 +1129,7 @@ main{
     color: grey;
 }
 /*End of footer section*/
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
 .slideshow,
 .slide,
 .slide img,
