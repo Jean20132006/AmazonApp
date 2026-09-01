@@ -1129,6 +1129,35 @@ main{
     color: grey;
 }
 /*End of footer section*/
+@media (max-width: 768px) {
+.slideshow,
+.slide,
+.slide img,
+.slideshow video,
+.carousel-square,
+.carousel-square-track,
+.carousel,
+.carousel-track,
+.personalized-recom,
+.go-to-top,
+.links,
+.before-footer-links,
+.title1-container,
+.title1-hr,
+.checkout-carousel,
+.checkout-carosel-page,
+.title-pagenum-container,
+.last-bottom-container,
+.last-links-container,
+.conditions-of-use-copyright-container,
+.conditions-of-use-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}
 
 
 
