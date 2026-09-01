@@ -2653,3 +2653,65 @@
      margin-bottom: 20px;
 }
 /*End of big image CSS*/
+
+@media (max-width: 768px) {
+.image-name-checkout-container,
+.title-container,
+.title-hr,
+.title1-hr-product-details,
+.products-totalPrice-add-to-list-container,
+.products-totalPrice,
+.title1-container,
+.title1-hr,
+.manufacturer-container,
+.manufacturer-first-row,
+.manufacturer-first-row img,
+.manufacturer-second-row-container,
+.manufacturer-third-row-container,
+.manufacturer-fourth-row-container,
+.manufacturer-fourth-row-container img,
+.product-description-container,
+.checkout-carousel,
+.checkout-carosel-page,
+.title-pagenum-container,
+.product-videos-container,
+.client-rating-video-carousel,
+.client-rating-video,
+.rating-video-carousel,
+#product-video2,
+.checkout-carousel-client-rating,
+.checkout-carosel-client-rating-page,
+.say-title-pagenum,
+.advertissement-section1,
+.advertissement-container,
+.checkout-carousel-video,
+.checkout-carosel-video-page,
+.customers-review-and-say-container,
+.say-container,
+.customer-say-hr,
+.comment-Nate,
+.checkout-carousel-review,
+.checkout-carosel-review-page,
+.checkout-corePower-last-advert1,
+.core-power-advertissement,
+.core-power-advertissement img,
+.last-bottom-container,
+*/ .personalized-recom,
+.go-to-top,
+.links,
+.before-footer-links,
+.last-links-container,
+.conditions-of-use-copyright-container,
+.conditions-of-use-container,
+.checkout-carousel-clothes-computers,
+.checkout-carosel-clothes-computers-page,
+.clothes-computers-image-container,
+.clothes-computers-image-container img,
+.big-image-clothes-computers-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+    box-sizing: border-box !important;
+}
+}
